@@ -1,0 +1,26 @@
+<mat-grid-list id="card2" cols="4" rowHeight="1:1.3">
+  
+  
+    <mat-grid-tile id="card2" *ngFor="let l of list, index as i">
+        <mat-card id="card">
+            <div id="wrap"><br>
+
+                <div> דירה מס' : {{i}}</div>
+                <p class="image"> בעלים: {{l.Fname}} {{l.lname}}</p> <br><br>
+                <div><img class="image" mat-card-image src={{l.img}}><br></div>
+                <br>
+                עיר: {{l.City}}<br>
+                <p> מספר חדרים: {{l.Rooms}}<br></p>
+                <p> מחיר: {{l.Price}}<br></p>
+                <p> טלפון: 0{{l.Phone}}<br></p>
+                <mat-card-actions>
+                    <a id="button" href="{{l.Link}}" target="_blank">מעבר לדירה</a>
+
+                </mat-card-actions>
+            </div>
+
+        </mat-card>
+    </mat-grid-tile>
+
+
+</mat-grid-list>
